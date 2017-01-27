@@ -12,8 +12,8 @@ public class ClientContact {
         RMIContactsInterface agenda = null;
         try {
             System.out.println("Localizando el registro de objetos remitos");
-            Registry registry = LocateRegistry.getRegistry("localhost", 5555);
-            System.out.println("Obteniendo el stab del objeto remoto");
+            Registry registry = LocateRegistry.getRegistry("localhost", 1099);
+            System.out.println("Obteniendo el stub del objeto remoto");
             agenda = (RMIContactsInterface) registry.lookup("Agenda");
         } catch (Exception e) {
             e.printStackTrace();
@@ -37,9 +37,9 @@ public class ClientContact {
                 if (agenda != null) {
                     System.out.println("Realizando operaciones con el objeto remoto");
 
-                    System.out.println(".......................... \n" + ".  0 Salir \n"
+                    System.out.println("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX \n" + ".  0 Salir \n"
                             + ".  1 Ver contactos  \n" + ".  2 Crear contacto \n" + ".  3 Modificar contacto \n"
-                            + ".  4 Borrar contacto  \n" + ".  5  Buscar contacto  \n" + ".  6 Salir  \n");
+                            + ".  4 Borrar contacto  \n" + ".  5  Buscar contacto  \n" + ".  6 Salir  \nXXXXXXXXXXXXXXXX");
 
                     respuesta = sc.nextInt();
 

@@ -57,7 +57,7 @@ public class Server implements RMIContactsInterface {
 		Registry reg = null;
 		try {
 			System.out.println("Crea el registro de objetos, escuchando en el puerto 5555");
-			reg = LocateRegistry.createRegistry(5555);
+			reg = LocateRegistry.createRegistry(1099);
 		} catch (Exception e) {
 			System.out.println("ERROR: No se ha podido crear el registro");
 			e.printStackTrace();
@@ -66,7 +66,7 @@ public class Server implements RMIContactsInterface {
 		Server serverObject = new Server();
 		try {
 			System.out.println("Inscribiendo el objeto Server en el registro");
-			System.out.println("Se le da un nombre �nico: Agenda");
+			System.out.println("Se le da un nombre unico: Agenda");
 			reg.rebind("Agenda", (RMIContactsInterface) UnicastRemoteObject.exportObject(serverObject, 0));
 		} catch (Exception e) {
 			System.out.println("ERROR: No se ha podido inscribir el objeto Server.");

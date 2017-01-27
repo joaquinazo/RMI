@@ -200,7 +200,7 @@ public class BBDD {
         }
 
         try {
-            String query = "DELETE FROM `tareapedro`.`contactos` WHERE `idcontactos`='" + id + "';";
+            String query = "DELETE FROM `contactos` WHERE `idcontactos`='" + id + "';";
             PreparedStatement psts = con.prepareStatement(query);
             psts.executeUpdate();
         } catch (SQLException e) {
@@ -219,7 +219,7 @@ public class BBDD {
             e1.printStackTrace();
         }
 
-        String sql = "UPDATE `tareapedro`.`contactos` SET `nombre`='" + nombre + "', `numero`='" + numero
+        String sql = "UPDATE `contactos` SET `nombre`='" + nombre + "', `numero`='" + numero
                 + "', `email`='" + email + "' WHERE `idcontactos`='" + id + "';";
 
         try {
